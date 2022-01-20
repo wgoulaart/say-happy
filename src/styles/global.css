@@ -1,35 +1,82 @@
- * {
-      box-sizing: border-box;
-    }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      gap: 16px;
-      font-size: 16px;
-      margin: 64px;
-      -webkit-font-smoothing: antialiased;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 16px;
+  margin: 64px;
 
-    input,
-    button {
-      width: 300px;
-      height: 40px;
-      border-radius: 3px;
-      background: #f3f3f3;
-      border: 1px solid #ccc;
-    }
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    button {
-      width: auto;
-      background-color: rgb(21, 166, 223);
-      border: 0;
-      color: #fff;
-    }
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  margin: 0;
+}
 
-    .container {
-      max-width: 400px;
-    }
+a {
+  text-decoration: none;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.c-textarea {
+  display: block;
+  width: 100%;
+  height: 128px;
+  border: 2px solid #ccc;
+  background: #fff;
+  resize: none;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.c-button {
+  height: 40px;
+  border-radius: 4px;
+  background-color: rgba(21, 166, 223, 1);
+  color: #fff;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.c-button:hover {
+  background-color: rgb(11, 119, 221);
+  transform: scale(1.04);
+}
+
+.c-button--outline {
+  background: #fff;
+  color: rgba(21, 166, 223, 1);
+}
+.c-button--outline:hover {
+  background-color: #c29;
+  color: #fff;
+}
+
+.container {
+  max-width: 400px;
+}

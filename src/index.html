@@ -6,19 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SayHappy</title>
+  <link rel="stylesheet" href="styles/global.css">
 </head>
 
 <body>
-  <div>
-    <input type="text" class="nomes" value="Vivi, Valeska, João, Moacir, Lari, Leta, Bi, Naty, Mané, Pebão, Tia Neize e Di, Janaa e Julio, Julio e
-    Jana, Grazi, Miguel, Samir, Geazi, Day, Lindão" />
-
-    <button onClick="gerar()">Gerar Mensagens</button>
+  <div id="app">
+    <textarea name="" id="listNames" class="c-textarea"
+      placeholder="Digite os nome separados por virgula `,`"></textarea>
+    <button onClick="makeMessage()" class="c-button">Gerar Mensagens 🚀</button>
+    <button onClick="clearMessage()" class="c-button c-button--outline">Limpar </button>
   </div>
 
   <div class="container"></div>
 
-  <script src="/scripts/main.js" type="module"></script>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>

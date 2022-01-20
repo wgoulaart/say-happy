@@ -1,16 +1,18 @@
-let names = [];
+let names = []
 
-    let input = document.querySelector('.nomes');
-    let container = document.querySelector('.container');
+let input = document.querySelector('.nomes')
+let container = document.querySelector('.container')
+let text = document.querySelector('#listNames')
+console.log(text.placeholder)
 
-    function gerar() {
-      names = input.value.split(',')
-      console.log('gerar', names);
-      sayHappy(names)
-    }
+function getNames() {
+  values = text.value ? text.value : text.placeholder
+  names = values.split(',')
+  buildMessagesList(names)
+}
 
-    function makeMessage(nome) {
-      return `<p>Oie, feliz ano novo ${nome}!!!</p>
+function setupMessage(nome) {
+  return `<p>Oie, feliz ano novo ${nome}!!!</p>
 <p>Boaaa noite! to passando para lhe agradecer por ter feito parte do meu *2021*, por estar presente em alguns momentos
   que precisei,
 *obrigado pela amizade, carinho comigo e minha família!*</p>
@@ -32,11 +34,19 @@ financeira* rsrs. </p>
 
 ---------
 
-`;
-    }
+`
+}
 
-    function sayHappy(list) {
-      list.map(name => {
-        container.innerHTML += makeMessage(name)
-      })
-    }
+function clearMessage() {
+  container.innerHTML = ''
+}
+
+function buildMessagesList(list) {
+  list.map((name) => {
+    container.innerHTML += setupMessage(name)
+  })
+}
+
+function makeMessage() {
+  getNames()
+}
