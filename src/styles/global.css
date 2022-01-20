@@ -68,15 +68,13 @@ a {
   transform: scale(1.04);
 }
 
-.c-button--outline {
+.c-button--outline,
+.c-button--outline:hover {
   background: #fff;
   color: rgba(21, 166, 223, 1);
-}
-.c-button--outline:hover {
-  background-color: #c29;
-  color: #fff;
 }
 
 .container {
   max-width: 400px;
+  font-size: 0.8rem;
 }
